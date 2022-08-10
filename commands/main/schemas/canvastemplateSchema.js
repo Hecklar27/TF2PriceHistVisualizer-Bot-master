@@ -7,6 +7,14 @@ const dim = {
     width: 1350
 }
 
+/* setups a template with elements such as 
+    - Hat Icon
+    - Unusual Effect
+    - Class Icons
+    - Item Name
+   and othe elements that do not change per page, speeding up the creation proccess of the embed very significantly
+*/
+
 async function canvastemplateReport(item, id, Class, classicon, name, effectname, effecticon) {
     const canvasstuff = {
         item:item,
@@ -63,6 +71,7 @@ async function canvastemplateReport(item, id, Class, classicon, name, effectname
     
     const background = canvas.toBuffer()
     
+    // creates the buffer and returns it so the final report can use it
     return background
 
 }

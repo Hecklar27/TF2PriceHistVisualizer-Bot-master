@@ -1,3 +1,5 @@
+// simple icon selecter
+
 exports.classIcon = (classname) => {
     if (classname == 'all_class') {
         return 'https://i.imgur.com/QSD2bqM.png'

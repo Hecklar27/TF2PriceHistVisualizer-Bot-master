@@ -8,6 +8,8 @@ const dim = {
     width: 1350
 }
 
+// creates the final image
+
 async function canvasReport(background, id, nprice, currency, date, pricedifference, timedifference, page) {
     const canvasstuff = {
         id:id,
@@ -42,6 +44,7 @@ async function canvasReport(background, id, nprice, currency, date, pricediffere
     ctx.font = '50px "TF2 Build"'
     ctx.fillText(fullprice, ((dim.width/2) - (fullpriceWidth/2))+180, 180)
     ctx.font = '40px "TF2 Build"'
+    // determines which icon and font color is used depending on how the price changed
     if (pricedifference == undefined) {
         ctx.drawImage(startt, 1175, 130, 125, 125)
         ctx.fillStyle = '#F09A3F'
@@ -59,6 +62,7 @@ async function canvasReport(background, id, nprice, currency, date, pricediffere
     }
     ctx.font = '40px "TF2 Build"'
     ctx.fillStyle = '#FFFFFF'
+    // annoying chain to correctly space the time differences by years, months, days, years and months, years and days, months and days, years and days, years months and days
     if (timedifference != undefined) {
         if (timedifference.years > 0) {
             if (timedifference.months > 0) {
@@ -115,6 +119,7 @@ async function canvasReport(background, id, nprice, currency, date, pricediffere
     }
     ctx.restore()
     
+    // sends out a MessageAttachment buffer including the id of the user that created it and the page number to keep any issues from occuring
     const attachment = new Discord.MessageAttachment(canvas.toBuffer(), `${page}pricerequest${id}.png`)
     
     return attachment
