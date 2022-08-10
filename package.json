@@ -1,0 +1,15 @@
+{
+  "name": "bpbotv1.5",
+  "version": "1.0.0",
+  "description": "Cleaned up version of previous bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hecklar",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1"
+  }
+}
