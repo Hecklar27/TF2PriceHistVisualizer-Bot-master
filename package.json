@@ -9,7 +9,10 @@
   "author": "Hecklar",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
+    "canvas": "^2.9.3",
     "discord.js": "^13.8.1",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "unusual-effects": "^1.8.0"
   }
 }
