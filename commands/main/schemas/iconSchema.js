@@ -2,7 +2,7 @@
 const fs = require('fs')
 const Discord = require("discord.js")
 
-exports.iconGrabv3 = (name) => {
+exports.iconGrab = (name) => {
 
     var url;
     var Class;
